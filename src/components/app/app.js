@@ -14,14 +14,14 @@ const App = () => {
       <RandomPlanet />
 
       <div className="container">
-      <div className="row mb2">
-        <div className="col-md-6">
-          <ItemList />
+        <div className="row mb2">
+          <div className="col-md-6">
+            <ItemList />
+          </div>
+          <div className="col-md-6">
+            <PersonDetails />
+          </div>
         </div>
-        <div className="col-md-6">
-          <PersonDetails />
-        </div>
-      </div>
       </div>
     </div>
   );
