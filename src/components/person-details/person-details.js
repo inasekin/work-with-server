@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SwapiService from '../../api/swapi-service';
+import Loader from '../loader';
 
 import './person-details.css';
 
@@ -35,12 +36,14 @@ export default class PersonDetails extends Component {
   }
 
   render() {
+    const {person} = this.state;
 
     if (!this.state.person) {
-      return <span>Select a person from a list</span>
+      return <span>Select a person from a list</span>;
+      // Loader
     }
 
-    const { id, height, name, gender, eye_color } = this.state.person;
+    const { id, height, name, gender, eye_color } = person;
 
     return (
       <div className="person-details card">

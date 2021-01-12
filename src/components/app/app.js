@@ -6,12 +6,14 @@ import ItemList from '../item-list';
 import PersonDetails from '../person-details';
 
 import './app.css';
+import ErrorIndicator from '../error-indicator/error-indicator';
 
 export default class App extends Component {
 
   state = {
     showRandomPlanet: true,
-    selectedPerson: 1
+    selectedPerson: null,
+    hasError: false
   };
 
   onPersonSelected = (id) => {
@@ -20,7 +22,16 @@ export default class App extends Component {
     })
   };
 
+  componentDidCatch() {
+    console.log('componentDidCatch');
+    this.setState({hasError: true});
+  }
+
   render() {
+
+    if(this.state.hasError) {
+      return <ErrorIndicator/>;
+    }
 
     return (
     <div>
