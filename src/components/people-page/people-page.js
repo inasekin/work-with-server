@@ -37,7 +37,8 @@ export default class PeoplePage extends Component {
             <div className="row mb2 margin-bottom">
                 <div className="col-md-6">
                 <ItemList onItemSelected={this.onPersonSelected}
-                            getData={this.swapiService.getAllPeople} />
+                            getData={this.swapiService.getAllPeople} 
+                            renderItem={(item) => `${item.name} (${item.eye_color}, ${item.height})`}/>
                 </div>
                 <div className="col-md-6">
                 <PersonDetails personId={this.state.selectedPerson} />
