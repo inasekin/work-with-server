@@ -14,12 +14,12 @@ export default class SwapiService {
   
     getAllPeople = async () => {
       const res = await this.getResource(`/people/`);
-      return res.results.map(this._transformPerson);
+      return res.results.map(this._transformItem);
     }
   
-    getPerson = async (id) => {
-      const person = await this.getResource(`/people/${id}/`);
-      return this._transformPerson(person);
+    getItem = async (id) => {
+      const item = await this.getResource(`/people/${id}/`);
+      return this._transformItem(item);
     }
   
     getAllPlanets = async () => {
@@ -70,13 +70,13 @@ export default class SwapiService {
       }
     }
 
-    _transformPerson = (person) => {
+    _transformItem = (item) => {
       return {
-          id: this._extractId(person),
-          name: person.name,
-          gender: person.gender,
-          eye_color: person.eye_color,
-          height: person.height
+          id: this._extractId(item),
+          name: item.name,
+          gender: item.gender,
+          eye_color: item.eye_color,
+          height: item.height
       }
     }
   }//асинхронный источник данных
