@@ -5,20 +5,7 @@ import ItemList from '../item-list/item-list';
 import PersonDetails from '../person-details';
 import ErrorIndicator from '../error-indicator/error-indicator';
 import SwapiService from '../../api/swapi-service';
-
-const Row = ({left, right}) => {
-    return (
-        <div className="row mb2 margin-bottom">
-            <div className="col-md-6">
-                {left}
-            </div>
-            <div className="col-md-6">
-                {right}
-            </div>
-        </div>
-    );
-};
-
+import Row from '../row';
 export default class PeoplePage extends Component {
 
     swapiService = new SwapiService();
@@ -57,7 +44,11 @@ export default class PeoplePage extends Component {
         );
 
         return (
-            <Row left={itemList} right={personDetails} />
+            <div>
+                <Row left={itemList} right={personDetails} />
+                {/* <Row left="left" right="right" /> */}
+            </div>
+
         );
     }
 }
