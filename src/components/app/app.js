@@ -8,7 +8,14 @@ import Row from "../row/row";
 import ItemDetails, { Record } from "../item-details/item-details";
 import SwapiService from "../../service/swapi-service";
 
-import ItemList from '../item-list';
+import {
+  PersonList,
+  PlanetList,
+  StarshipList,
+  PersonDetails,
+  PlanetDetails,
+  StarshipDetails
+} from '../sw-components';
 
 import './app.css';
 
@@ -70,20 +77,16 @@ export default class App extends Component {
         <div className="stardb-app">
           <Header /> 
           <div className="container">
-          <RandomPlanet/>
-          <ItemList
-            getData={getAllPeople}
-            onItemSelected={() => {}}>
+          
+          <PersonDetails itemId={11}/>
 
+          <StarshipDetails itemId={5}/>
+
+          <PlanetDetails itemId={5}/>
+
+          <PersonList>
             { ({name}) => <span>{name}</span> }
-          </ItemList>
-
-          <ItemList
-            getData={getAllPlanets}
-            onItemSelected={() => {}}>
-
-            { ({name}) => <span>{name}</span> }
-          </ItemList>
+          </PersonList>
           </div>
 
 
