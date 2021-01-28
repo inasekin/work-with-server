@@ -66,10 +66,11 @@ export default class App extends Component {
       <ErrorBoundry>
         <div className="stardb-app">
           <Header />
-
+          <div className="container">
           <Row
             left={personDetails}
             right={starshipDetails} />
+          </div>
         </div>
       </ErrorBoundry>
     );
