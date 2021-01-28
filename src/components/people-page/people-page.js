@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import ItemList from '../item-list/item-list';
 import ItemDetails from '../item-details/item-details';
-import SwapiService from '../../services/swapi-service';
+import SwapiService from '../../service/swapi-service';
 import Row from '../row';
 import ErrorBoundry from '../error-boundry';
 
