@@ -6,6 +6,7 @@ import SwapiService from '../../service/swapi-service';
 
 import './random-planet.css';
 
+
 export default class RandomPlanet extends Component {
 
   swapiService = new SwapiService();
@@ -13,7 +14,7 @@ export default class RandomPlanet extends Component {
   state = {
     planet: {},
     loading: true
-  };
+  }
 
   componentDidMount() {
     this.updatePlanet();
