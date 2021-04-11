@@ -30,7 +30,7 @@
 }
 
 .header .text-white {
-  color: #fff;
+  color: #fff !important;
 }
 .header__title {
   display: inline-block;
@@ -38,4 +38,9 @@
 
 .header__navigation {
   display: inline-flex;
+}
+
+.header button {
+  height: 2.2rem;
+  margin-top: 3px;
 }
